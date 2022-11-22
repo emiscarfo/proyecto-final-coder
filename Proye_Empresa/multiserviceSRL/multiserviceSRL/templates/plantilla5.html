@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de alumnos uso de if y for, muestra lista numeradas</title>
+</head>
+<body>
+    <h1>Curso de {{tecnologia}}</h1>
+
+    {% if tecnologia == "Python" %} 
+    <h1 style="color:green;"> Curso de {{tecnologia}}</h1>
+    {% elif tecnologia == "Cobol" %}
+    <h1 style="color:goldenrod;"> Curso de {{tecnologia}}</h1>
+    {% else %}
+    <h1>Curso de {{tecnologia}}</h1>
+    {% endif %}
+
+    <h2>Listado de alumnnos:</h2>
+    <ul>
+        {% for alumno in lista_alumnos %}
+        <li>{{alumno}}</li>
+        {% endfor %}
+    </ul>  <!--muestra listado con puntos sin numeracion-->
+
+    <h2>Listado de alumnnos enumerados:</h2>
+    <ol> <!--muestra listado con los objetos enumerados-->
+        {% for alumno in lista_alumnos %} <!--"alumno" es cualquier nombre 
+que asigno a la variable para recorrer el for, pero "lista_alumnos" tiene que 
+ser el mismo nombre que usè para el diccionario-->
+        <li>{{alumno}}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>platilla nro4</title>
+</head>
+<body>
+   <h1> En esta plantilla agregamos un condicional , si la nota es menor que 4 en rojo en otro caso en azul </h1>
+
+   <p>
+    {% for n in notas %}
+        {% if n < 4 %}
+            <p style="color:red"> NOTA MALA {{n}}</p>
+        {% else %} <p style="color:blue">NOTA BUENA {{n}}</p>    
+        {% endif %}
+    {% endfor %}
+    </p>
+</body>
+</html>
